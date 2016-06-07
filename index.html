@@ -1,8 +1,179 @@
 <!DOCTYPE HTML>
+<HTML>
 
+<head>
+	<title>My Resume</title>
+	<link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro' rel='stylesheet' type='text/css'>
+	<link href = "styles.css" rel = "stylesheet" type = "text/css">
+</head>
 
-<html>
 <body>
-This is a sample test of hosting website
+	<nav class='nav_closed'>
+		<a href = '#mainnav' id = 'menu'>Menu</a>
+			<ul id='navlist'>
+				<li><a href = '#page-header'>Home</a></li>
+
+				<li><a href = '#profile'>Profile</a></li>
+				<li><a href = '#skill'>Skill</a></li>
+
+				<li><a href = '#education'>Education</a></li>
+				<li><a href = '#experience'>Experience</a></li>
+				<li><a href = '#contact'>Contact</a></li>
+			</ul>
+
+
+
+	</nav>
+	<section id="page-header">
+			<header>
+				<h1>Yang Kim</h1>
+				<h2>Web Developing</h2>
+			</header>
+			
+			<article>
+				<p>
+					
+
+				</p>
+			</article>
+	</section>
+	
+
+	<!--Profile-->
+
+	<section id ='profile' class='page-content'>
+		<div>
+				<header>
+					<h1>Profile</h1>
+					
+				</header>
+
+			<article>
+				<p>Graduated from University of Utah.  Seeking for entry level position in Javascript.
+
+
+
+				</p>
+			</article>
+		</div>
+	</section>
+
+	<section id ='skill' class='page-content'>
+		<div>
+				<header>
+					<h1>Skills</h1>
+					<h2>Heading Level 2</h2>
+				</header>
+
+			<article>
+				Programming
+				<ul>
+					<li>PHP</li>
+					<li>Java</li>
+					<li>Javascript</li>
+					<li>HTML</li>
+					<li>CSS</li>
+					<li>JQuery</li>
+				</ul>
+				Database
+				<ul>
+					<li>MySql</li>
+					<li>SQL</li>
+
+				</ul>
+
+			</article>
+
+		</div>
+	</section>
+
+	<section id ='education' class='page-content'>
+		<div>
+				<header>
+					<h1>Education</h1>
+					<h2>Heading Level 2</h2>
+				</header>
+
+			<article>
+				<dl>
+					<dt>University of Utah</dt>
+					<dd>Information Systems <span id = 'date'>2009 - 2015<span></dd>
+
+			</article>
+		</div>
+	</section>
+
+	<section id ='experience' class='page-content'>
+		<div>
+				<header>
+					<h1>Experience</h1>
+					<h2>Places worked</h2>
+				</header>
+
+			<article>
+				<h3>2014-present</h3>
+				<dl>
+					<dt>Service Desk Technician: Crest Financial</dt>
+					<dd>
+						<p>Helped bunch of folks with softphones
+						</p>					
+					</dd>
+
+
+
+				</p>
+			</article>
+		</div>
+	</section>
+
+
+
+
+
+
+
+
+
+
+	<script src ="js/jquery-1.12.3.min.js" type ="text/javascript"></script>
+	<script type = "text/javascript">
+		$(document).ready(function(){
+			$('#menu').click(function() {
+				$('.nav_closed').toggleClass('nav_open');
+			})
+			$('nav ul li a').click(function() {
+				$('nav.nav_open').removeClass('nav_open');
+
+			})
+		})
+
+	</script>
+
+	<script type = 'text/javascript'>
+		$(function() {
+		  $('a[href*="#"]:not([href="#"])').click(function() {
+		    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+		      var target = $(this.hash);
+		      target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+		    if (target.length) {
+		        $('html, body').animate({
+		          scrollTop: target.offset().top
+		        }, 800);
+		        return false;
+      		}
+    		}
+  		});
+	});
+	</script>
+
 </body>
-</html>
+
+
+
+
+
+
+
+
+</HTML>
+
